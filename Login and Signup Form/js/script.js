@@ -1,10 +1,10 @@
 const forms = document.querySelector(".forms"),
     pwShowHide = document.querySelectorAll(".eye-icon"),
     links = document.querySelectorAll(".link");
-
 pwShowHide.forEach(eyeIcon => {
     eyeIcon.addEventListener("click", () => {
-        let pwFields = eyeIcon.parentelement.parentElement.querySelectorA11(".password");
+        let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+
         pwFields.forEach(password => {
             if (password.type === "password") {
                 password.type = "text";
@@ -14,6 +14,7 @@ pwShowHide.forEach(eyeIcon => {
             password.type = "password";
             eyeIcon.classList.replace("bx-show", "bx-hide");
         })
+
     })
 })
 links.forEach(link => {
